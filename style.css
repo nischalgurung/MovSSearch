@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(12, 11, 11);
+    --secondary-color: rgb(218, 218, 218);
+    --tertiary-color: rgb(17, 17, 17);
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(238, 238, 238);
+}
+
+header {
+    padding: 0rem 1rem;
+    display: flex;
+    background-color: var(--tertiary-color);
+    position: relative;
+    justify-content: space-between;
+}
+
+header b {
+    color: red;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+.search {
+    background-color: transparent;
+    font-family: inherit;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 3px solid var(--secondary-color);
+    color: white;
+
+}
+
+.btn {
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.search::placeholder {
+    color: var(--secondary-color);
+    opacity: 0.5;
+}
+
+.search:focus {
+    background-color: rgb(27, 27, 27);
+    outline: var(--secondary-color);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    box-shadow: 0 1px 1px 2px rgba(255, 255, 255, 0.055);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    color: var(--tertiary-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.movie-info span {
+    background-color: var(--tertiary-color);
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+
+
+/* Ratings Color */
+.movie-info span.green {
+    color: limegreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+}
+
+.icon {
+    font-size: 2rem;
+    margin: auto 10px;
+    padding: 10px;
+    color: white;
+}
+
+@media (max-width:500px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search {
+        margin: 0 5px 0 20px;
+        padding: 2px 16px;
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+}
