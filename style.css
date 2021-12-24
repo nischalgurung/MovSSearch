@@ -30,6 +30,8 @@ header b {
     color: red;
 }
 
+
+/* The search section */
 form {
     display: flex;
     justify-content: center;
@@ -75,6 +77,8 @@ main {
     justify-content: center;
 }
 
+
+/* Individual movie card */
 .movie {
     width: 300px;
     margin: 1rem;
@@ -135,6 +139,8 @@ main {
     color: red;
 }
 
+
+/* Footer section */
 .footer {
     text-align: center;
     margin-top: 2rem;
@@ -152,6 +158,29 @@ main {
     color: white;
 }
 
+.prevNextBtns {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0 6%;
+}
+
+.prevNextBtns .btn {
+    border: 2px solid var(--tertiary-color);
+    color: white;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.2rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--tertiary-color);
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+}
+
+/* Media query for small devices */
 @media (max-width:500px) {
     header {
         flex-wrap: wrap;
